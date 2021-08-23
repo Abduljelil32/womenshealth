@@ -1,0 +1,130 @@
+div.ovu-calc {
+    background-color: #f6f4f8;
+    padding: 1.5rem;
+}
+
+.ovu-calc__calculator-row {
+    padding: 1rem 0;
+}
+
+#ovu-calc__calendar-result {
+    z-index: 9;
+    position: absolute;
+    top: 0;
+    bottom: 0;
+    right: 0;
+    left: 0;
+    background-color: #f6f4f8;
+    display: none;
+
+}
+
+#ovu-calc__form {
+    max-width: 100%;
+}
+
+#ovu-calc__results {
+    z-index: 9;
+    position: absolute;
+    top: 0;
+    bottom: 0;
+    right: 0;
+    left: 0;
+    background-color: #f6f4f8;
+    display: none;
+}
+
+#calendar-key {
+    margin: 0 auto;
+    text-align: center;
+    width: 100%;
+    display: none;
+    padding: 0.4rem 0;
+}
+
+#calendar-key span::before {
+    content: " ";
+    display: inline-block;
+    width: 20px;
+    height: 20px;
+    margin-right: 5px;
+    margin-bottom: -4px;
+}
+
+#calendar-key span.fertile-window-key::before {
+    border: 1px solid #ccc;
+    background-color: #e5f6fd;
+}
+
+#calendar-key span.ovulation-date-key::before {
+    border: 1px solid #ccc;
+    background-color: #3b99fc;
+}
+
+.results-tag {
+    font-weight: bold;
+    color: #0376a8;
+    padding: 0.6em 0.8em;
+}
+
+#results-social-links {
+    margin-top: 3.6rem;
+    display: none;
+}
+
+#results-social-links svg {
+    vertical-align: middle;
+    margin-bottom: 0.3em;
+    display: inline-block;
+}
+
+#results-social-links svg path {
+    fill: #592c81 !important;
+}
+
+/*tiny date picker custom styles*/
+/*Hide "Today" button*/
+.dp-today { display: none; }
+
+/*set max width on calendars*/
+.dp-permanent {
+    max-width: 85%;
+    width: 85%;
+    margin: 0 auto;
+}
+
+.dp-cal-month:hover, .dp-cal-year:hover {
+    background: transparent;
+    color: inherit;
+}
+
+.dp-edge-day.dp-selected {
+    background: transparent;
+    color: #AAA;
+}
+
+#ovu-calc__calendar-result .dp-day.dp-day-disabled,
+#ovu-calc__calendar-result .dp-day.dp-day-disabled:hover {
+    background-color: transparent;
+    color: inherit;
+}
+
+#ovu-calc__calendar-result .dp-day:not(.dp-day-disabled),
+#ovu-calc__calendar-result .dp-day:not(.dp-day-disabled):hover {
+    background-color: #e5f6fd;
+    color: inherit;
+}
+
+#ovu-calc__calendar-result .dp-day.dp-selected,
+#ovu-calc__calendar-result .dp-day.dp-selected:hover {
+    background-color: #3b99fc;
+    color: inherit;
+}
+
+@media (max-width: 64em) {
+    .dp-permanent {
+        max-width: 100%;
+        width: 100%;
+        margin: 0 auto;
+    }
+}
